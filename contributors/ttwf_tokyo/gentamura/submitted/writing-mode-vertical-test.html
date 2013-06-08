@@ -1,0 +1,69 @@
+<html>
+<head>
+    
+    <title>CSS Flexbox Test: flex flow </title>
+    
+    <link rel="author" title="gentamura" href="mailto:gen.tamura84@gmail.com">
+    <!-- You must have at least one spec link, but may have as many as are covered in the test. -->
+    <!-- Be sure to make the main testing area first in the order -->
+    <link rel="help" href="http://www.w3.org/TR/css3-flexbox/#flex-flow-property">
+    <link rel="help" href="http://dev.w3.org/csswg/css-flexbox/#flex-flow-property">
+    <!-- The match link is only required if this is a reftest -->
+    <link rel="match" href="reference/writing-mode-vertical-ref.html">
+    <meta name="flags" content="">
+    <meta name="assert" content="flex direction with witing mode in Japanese">
+
+    <meta>
+
+
+    <style>
+
+        .nav {
+            display: -webkit-flex; /* Establish a flex container */
+            -webbit-flex-direction: column;
+            -webkit-justify-content: space-around;
+            
+            list-style-type: none;
+            background-color: red;
+        }
+
+        /* Second image: Relative flex */
+        .nav li {
+            background-color: yellow;
+            width: 200px;
+            -webkit-writing-mode: vertical-rl;
+        }
+
+        .nav li:nth-child(2) {
+            background-color: green;
+        }
+
+
+
+        /*
+        
+        start -> end
+
+        widthが広いから、次のrowに入る
+        justfy-content: felx-start; 英語はhidari
+        
+        justfy-content: ５つ;
+        -webkit-writing-mode: vertical-rl;
+
+        writing derection: ;
+
+        */
+
+    </style>
+    
+</head>
+<body>
+
+    <ul class="nav">
+        <li>縦書きテキスト１</li>
+        <li>縦書きテキスト２</li>
+        <li>縦書きテキスト３</li>
+    </ul>
+
+</body>
+</html>
